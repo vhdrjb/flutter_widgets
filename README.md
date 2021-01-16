@@ -7,7 +7,7 @@ An application contains flutter widgets implementation.
 from : [Flutter Widget of the week](https://www.youtube.com/watch?v=b_sQ9bMltGU&list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG&index=1)
 
 - [x] Safe Area 
-- [x] Expanded 
+- [x] Expanded , post design from : [YueYue](https://dribbble.com/shots/14795930-Social-App-Design)
 - [ ] Wrap 
 - [ ] Animated Container 
 - [ ] Opacity 
