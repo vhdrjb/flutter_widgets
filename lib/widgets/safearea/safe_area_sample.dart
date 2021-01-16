@@ -20,7 +20,13 @@ class SafeAreaState extends State<SafeAreaSample> {
       bottom: bottomSafeAreaEnabled,
       top: topSafeAreaEnabled,
       child: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.amberAccent[200],title: Text("safe area",style: TextStyle(color: Colors.black),),),
+        appBar: AppBar(
+          backgroundColor: Colors.amberAccent[200],
+          title: Text(
+            "safe area",
+            style: TextStyle(color: Colors.black),
+          ),
+        ),
         body: Container(
           color: Colors.amberAccent[200],
           child: Center(
@@ -29,6 +35,10 @@ class SafeAreaState extends State<SafeAreaSample> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Text("Use these buttons to disable/enable safe area"),
+                ),
                 _topArrowButton(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

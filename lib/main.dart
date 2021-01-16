@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_intro/widgets/safearea/safe_area_sample.dart';
+
+import 'widgets/expanded/expanded_sample.dart';
+import 'widgets/safearea/safe_area_sample.dart';
 
 void main() {
   runApp(FlutterWidgets());
@@ -11,6 +13,7 @@ class FlutterWidgets extends StatelessWidget {
     return MaterialApp(
       routes: {
         "/safe_area": (context) => SafeAreaSample(),
+        "/expanded": (context) => ExpandedSample(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -27,6 +30,10 @@ class FlutterWidgets extends StatelessWidget {
       {
         "safe area":
             "A widget that insets its child by sufficient padding to avoid intrusions by the operating system."
+      },
+      {
+        "Expanded":
+            "Using an Expanded widget makes a child of a Row, Column, or Flex expand to fill the available space along the main axis (e.g., horizontally for a Row or vertically for a Column). If multiple children are expanded, the available space is divided among them according to the flex factor."
       }
     ];
     return ListView.builder(
@@ -53,7 +60,7 @@ class FlutterWidgets extends StatelessWidget {
                 child: Text(description),
               ),
               onTap: () => Navigator.pushNamed(
-                  context, "/${title.replaceAll(" ", "_")}"),
+                  context, "/${title.toLowerCase().replaceAll(" ", "_")}"),
             ),
           ),
         );
