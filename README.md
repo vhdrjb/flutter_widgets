@@ -9,7 +9,7 @@ from : [Flutter Widget of the week](https://www.youtube.com/watch?v=b_sQ9bMltGU&
 - [x] Safe Area 
 - [x] Expanded , post design from : [YueYue](https://dribbble.com/shots/14795930-Social-App-Design)
 - [x] Wrap , Tags design from : [Peter Witham](https://dribbble.com/shots/11354202-Hashtag-Manager-v1-0/attachments/2966457?mode=media)
-- [ ] Animated Container 
+- [x] Animated Container 
 - [ ] Opacity 
 - [ ] Future Builder 
 - [ ] Fade Transition 
