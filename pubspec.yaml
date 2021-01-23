@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   vector_math: any
+  tuple: ^1.0.3
+
 
 
 

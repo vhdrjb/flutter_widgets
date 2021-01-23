@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets_intro/widgets/wrap/wrap_sample.dart';
 
 import 'widgets/expanded/expanded_sample.dart';
 import 'widgets/safearea/safe_area_sample.dart';
@@ -14,6 +15,7 @@ class FlutterWidgets extends StatelessWidget {
       routes: {
         "/safe_area": (context) => SafeAreaSample(),
         "/expanded": (context) => ExpandedSample(),
+        "/wrap": (context) => WrapSample(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -34,6 +36,10 @@ class FlutterWidgets extends StatelessWidget {
       {
         "Expanded":
             "Using an Expanded widget makes a child of a Row, Column, or Flex expand to fill the available space along the main axis (e.g., horizontally for a Row or vertically for a Column). If multiple children are expanded, the available space is divided among them according to the flex factor."
+      },
+      {
+        "Wrap":
+            "A Wrap lays out each child and attempts to place the child adjacent to the previous child in the main axis, given by direction, leaving spacing space in between. If there is not enough space to fit the child, Wrap creates a new run adjacent to the existing children in the cross axis."
       }
     ];
     return ListView.builder(
@@ -44,7 +50,7 @@ class FlutterWidgets extends StatelessWidget {
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            elevation: 5,
+            elevation: 3,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(5))),
             child: ListTile(
