@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_widgets_intro/widgets/expanded/post_widget.dart';
 
 class ExpandedSample extends StatelessWidget {
@@ -11,8 +12,10 @@ class ExpandedSample extends StatelessWidget {
         title: Text("Expanded sample"),
       ),
       body: Container(
+        height: double.infinity,
+        width: double.infinity,
         color: Colors.pink,
-        child: Column(
+        child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),

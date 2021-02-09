@@ -28,28 +28,31 @@ class SafeAreaState extends State<SafeAreaSample> {
           ),
         ),
         body: Container(
+          height: double.infinity,
           color: Colors.amberAccent[200],
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: Text("Use these buttons to disable/enable safe area"),
-                ),
-                _topArrowButton(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _leftArrowButton(),
-                    _resetButton(),
-                    _rightArrowButton()
-                  ],
-                ),
-                _bottomArrowButton()
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Text("Use these buttons to disable/enable safe area"),
+                  ),
+                  _topArrowButton(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _leftArrowButton(),
+                      _resetButton(),
+                      _rightArrowButton()
+                    ],
+                  ),
+                  _bottomArrowButton()
+                ],
+              ),
             ),
           ),
         ),

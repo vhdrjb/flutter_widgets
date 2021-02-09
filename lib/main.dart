@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_intro/widgets/animated_container/animated_container_sample.dart';
+import 'package:flutter_widgets_intro/widgets/opacity/opacity_sample.dart';
 import 'package:flutter_widgets_intro/widgets/wrap/wrap_sample.dart';
 
 import 'widgets/expanded/expanded_sample.dart';
@@ -18,6 +19,7 @@ class FlutterWidgets extends StatelessWidget {
         "/expanded": (context) => ExpandedSample(),
         "/wrap": (context) => WrapSample(),
         "/animated_container": (context) => AnimatedContainerSample(),
+        "/opacity": (context) => OpacitySample(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -46,6 +48,10 @@ class FlutterWidgets extends StatelessWidget {
       {
         "Animated Container":
             "The AnimatedContainer will automatically animate between the old and new values of properties when they change using the provided curve and duration. Properties that are null are not animated. Its child and descendants are not animated"
+      },
+      {
+        "Opacity":
+            "This class paints its child into an intermediate buffer and then blends the child back into the scene partially transparent."
       }
     ];
     return ListView.builder(

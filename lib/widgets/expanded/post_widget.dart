@@ -14,27 +14,32 @@ class PostWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15)
+      child: Container(
+        constraints: BoxConstraints(
+          maxWidth: 400
         ),
-        elevation: 3,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-              child: _userInfoRow(),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-              child: _image(context),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(32, 8, 32, 16),
-              child: _actions(),
-            )
-          ],
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15)
+          ),
+          elevation: 3,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+                child: _userInfoRow(),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                child: _image(context),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(32, 8, 32, 16),
+                child: _actions(),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -99,11 +104,19 @@ class PostWidget extends StatelessWidget {
 
   Widget _actions() {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+
       children: [
         _like(),
-        _comments(),
-        _share(),
-        Spacer(),
+        Padding(
+          padding: const EdgeInsets.only(left :4.0),
+          child: _comments(),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left :4.0),
+          child: _share(),
+        ),
+        Spacer(flex: 1,),
         _bookmark(),
       ],
     );
@@ -114,7 +127,7 @@ class PostWidget extends StatelessWidget {
       children: [
         Icon(Icons.favorite_border),
         Padding(
-          padding: const EdgeInsets.only(left: 8),
+          padding: const EdgeInsets.only(left: 2),
           child: Text("7.8k"),
         )
       ],
@@ -122,47 +135,38 @@ class PostWidget extends StatelessWidget {
   }
 
   Widget _comments() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16),
-      child: Row(
-        children: [
-          Icon(Icons.chat_bubble_outline),
-          Padding(
-            padding: const EdgeInsets.only(left: 8),
-            child: Text("142"),
-          )
-        ],
-      ),
+    return Row(
+      children: [
+        Icon(Icons.chat_bubble_outline),
+        Padding(
+          padding: const EdgeInsets.only(left: 2),
+          child: Text("142"),
+        )
+      ],
     );
   }
 
   Widget _share() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16),
-      child: Row(
-        children: [
-          Icon(Icons.eco),
-          Padding(
-            padding: const EdgeInsets.only(left: 8),
-            child: Text("142"),
-          )
-        ],
-      ),
+    return Row(
+      children: [
+        Icon(Icons.eco),
+        Padding(
+          padding: const EdgeInsets.only(left: 2),
+          child: Text("142"),
+        )
+      ],
     );
   }
 
   Widget _bookmark() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16),
-      child: Row(
-        children: [
-          Icon(Icons.turned_in_not),
-          Padding(
-            padding: const EdgeInsets.only(left: 8),
-            child: Text("142"),
-          )
-        ],
-      ),
+    return Row(
+      children: [
+        Icon(Icons.turned_in_not),
+        Padding(
+          padding: const EdgeInsets.only(left: 2),
+          child: Text("142"),
+        )
+      ],
     );
   }
 }

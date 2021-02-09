@@ -25,6 +25,9 @@ dependencies:
     sdk: flutter
   vector_math: any
   tuple: ^1.0.3
+  percent_indicator: ^2.1.9
+  transparent_image: ^1.0.0
+
 
 
 
