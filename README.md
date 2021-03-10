@@ -12,7 +12,7 @@ from : [Flutter Widget of the week](https://www.youtube.com/watch?v=b_sQ9bMltGU&
 - [x] Animated Container 
 - [x] Opacity , Exploration | ISP App : [Yafi Asyam](https://dribbble.com/shots/13977479-Exploration-ISP-App)
 - [ ] Future Builder 
-- [ ] Fade Transition 
+- [x] Fade Transition 
 - [ ] Floating Action Button 
 - [ ] PageView 
 - [ ] Table 
