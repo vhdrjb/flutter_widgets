@@ -14,7 +14,7 @@ from : [Flutter Widget of the week](https://www.youtube.com/watch?v=b_sQ9bMltGU&
 - [ ] Future Builder 
 - [x] Fade Transition 
 - [ ] Floating Action Button 
-- [ ] PageView 
+- [x] PageView , with : Marcin Szałek : [UI Tickets Challenge](https://fidev.io/tickets-challenge-parallax/)
 - [ ] Table 
 - [ ] Silver Appbar 
 - [ ] SilverList & SilverGrid 
