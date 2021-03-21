@@ -33,7 +33,7 @@ from : [Flutter Widget of the week](https://www.youtube.com/watch?v=b_sQ9bMltGU&
 - [ ] Back Drop Filter
 - [ ] Align
 - [ ] Positioned
-- [ ] AnimatedBuilder
+- [x] AnimatedBuilder  with : Marcin Szałek : [Advanced transitions – UI Tickets Challenge](https://fidev.io/tickets-advanced-transitions/)
 - [ ] Dismissible
 - [ ] SizedBox
 - [ ] ValueListenableBuilder
