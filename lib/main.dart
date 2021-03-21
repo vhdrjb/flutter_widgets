@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets_intro/widgets/animated_container/animated_container_sample.dart';
-import 'package:flutter_widgets_intro/widgets/fade_transition/fade_transition_sample.dart';
-import 'package:flutter_widgets_intro/widgets/opacity/opacity_sample.dart';
-import 'package:flutter_widgets_intro/widgets/pageview/page_view_sample.dart';
-import 'package:flutter_widgets_intro/widgets/wrap/wrap_sample.dart';
 
+import 'widgets/animated_builder/animated_builder_sample.dart';
+import 'widgets/animated_container/animated_container_sample.dart';
+import 'widgets/fade_transition/fade_transition_sample.dart';
+import 'widgets/opacity/opacity_sample.dart';
+import 'widgets/pageview/page_view_sample.dart';
+import 'widgets/wrap/wrap_sample.dart';
 import 'widgets/expanded/expanded_sample.dart';
 import 'widgets/safearea/safe_area_sample.dart';
 
@@ -25,6 +26,7 @@ class FlutterWidgets extends StatelessWidget {
         "/opacity": (context) => OpacitySample(),
         "/fade_transition": (context) => FadeTransitionSample(),
         "/pageview": (context) => PageViewSample(),
+        "/animated_builder": (context) => AnimatedBuilderSample(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -64,6 +66,10 @@ class FlutterWidgets extends StatelessWidget {
       },
       {
         "PageView": "A scrollable list that works page by page.",
+      },
+      {
+        "Animated Builder":
+            "AnimatedBuilder is useful for more complex widgets that wish to include an animation as part of a larger build function. To use AnimatedBuilder, simply construct the widget and pass it a builder function."
       }
     ].reversed.toList();
     return ListView.builder(
