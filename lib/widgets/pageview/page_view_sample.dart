@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_intro/widgets/pageview/sliding_card.dart';
+import '../animated_builder/event.dart';
 
 class PageViewSample extends StatelessWidget {
   @override
@@ -12,24 +13,25 @@ class PageViewSample extends StatelessWidget {
         ),
         backgroundColor: Colors.white,
         elevation: 0,
+        iconTheme: IconThemeData(color: Colors.grey),
       ),
       body: Container(
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(64.0),
-          child: Center(child: _SlidingCardView()),
+          padding: const EdgeInsets.all(8.0),
+          child: Center(child: SlidingCardView()),
         ),
       ),
     );
   }
 }
 
-class _SlidingCardView extends StatefulWidget {
+class SlidingCardView extends StatefulWidget {
   @override
   _SlidingCardViewState createState() => _SlidingCardViewState();
 }
 
-class _SlidingCardViewState extends State<_SlidingCardView> {
+class _SlidingCardViewState extends State<SlidingCardView> {
   PageController _pageController;
   double _pageOffset = 0;
 
@@ -53,24 +55,23 @@ class _SlidingCardViewState extends State<_SlidingCardView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.55,
+      height: MediaQuery
+          .of(context)
+          .size
+          .height * 0.55,
       child: PageView(
         controller: _pageController,
-        children: [
-          SlidingCard(
-            name: "Shenzhen GLOBAL DESIGN AWARD 2018",
-            date: "4.20-30",
-            assetName: "steve-johnson.jpg",
-            offset: _pageOffset,
-          ),
-          SlidingCard(
-            name: "Dawan District, Guangdong Hong Kong and Macao",
-            date: "4.28-31",
-            assetName: "rodion-kutsaev.jpg",
-            offset: _pageOffset - 1,
-          ),
-        ],
+        children: children(),
       ),
+    );
+  }
+
+  List<Widget> children() {
+    return List.generate(events.length, (index) =>
+        SlidingCard(name: events[index].title,
+            date: events[index].date,
+            assetName: events[index].assetName,
+            offset: _pageOffset - index)
     );
   }
 }
